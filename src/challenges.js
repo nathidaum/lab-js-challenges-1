@@ -59,9 +59,16 @@ function multiplyBy(arr, multiplier) {
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
-function filterOut() {}
+function filterOut(originalArray, wordsToRemove) {
 
-
+  if(originalArray.length === 0) {
+    return null
+  } else if (wordsToRemove.length === 0) {
+    return originalArray
+  }
+  
+  return originalArray.filter(item => !wordsToRemove.includes(item));
+}
 
 
 // Iteration 5 | Unique Arrays
@@ -79,10 +86,12 @@ const duplicateWords = [
   "bring"
 ];
 
-function uniquifyArray() {}
-
-
-
+function uniquifyArray(arr) {
+  if(arr.length === 0) {
+    return null;
+  }
+  return arr, arr.filter((item, index) => arr.indexOf(item) === index);
+}
 
 // Bonus: Iteration 6 | Product of Adjacent Numbers
 const matrix = [
