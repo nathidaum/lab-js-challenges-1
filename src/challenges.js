@@ -18,7 +18,7 @@ function howManyTimes(arr, wordToSearch) {
 
   for(let i = 0; i < arr.length; i++) {
     if(arr[i] === wordToSearch) {
-      console.log("Current word is: " + wordToSearch)
+      // console.log("Current word is: " + wordToSearch)
       count ++;
     }
   }
@@ -39,14 +39,21 @@ function createSequence(n) {
   return arr;
 }
 
-
 // Iteration 3 | Multiply for Each
 const numbers = [1, 2, 5, 10, 13, 50];
 
-function multiplyBy() {}
+function multiplyBy(arr, multiplier) {
+  let multiplesArray = [];
+  
+  if(arr.length === 0) {
+    return [];
+  }
 
-
-
+  arr.forEach(function(element){
+    multiplesArray.push(element * multiplier)
+  })
+  return multiplesArray;
+}
 
 // Iteration 4 | Filter Out
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
